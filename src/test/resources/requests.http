@@ -1,0 +1,17 @@
+###
+
+POST http://localhost:8080/media/bytes
+Content-Type: image/jpeg
+
+< Russian_passport.jpg
+###
+
+POST http://localhost:8080/media/multipart
+Content-Type: multipart/form-data; boundary=WebBoundary
+
+--WebBoundary
+Content-Disposition: form-data; name="file"; filename="Russian_passport.jpg"
+Content-Type: image/jpeg
+
+< Russian_passport.jpg
+--WebBoundary--

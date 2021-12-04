@@ -1,0 +1,35 @@
+Thumbs.db*
+.DS_Store
+/out/
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### Application ###
+/media/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Sec
