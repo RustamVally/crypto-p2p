@@ -4,6 +4,7 @@ POST http://localhost:8080/media/bytes
 Content-Type: image/jpeg
 
 < Russian_passport.jpg
+
 ###
 
 POST http://localhost:8080/media/multipart
@@ -15,3 +16,40 @@ Content-Type: image/jpeg
 
 < Russian_passport.jpg
 --WebBoundary--
+
+###
+
+POST http://localhost:8080/media/verification
+Content-Type: verification/form-data; boundary=WebBoundary
+
+
+###
+
+GET http://localhost:8080/orders/getAll
+
+###
+
+GET http://localhost:8080/orders/getById?id=1
+
+###
+
+GET http://localhost:8080/orders/getById?id=545454
+
+###
+
+POST http://localhost:8080/orders/save
+Content-Type: application/json
+
+{
+  "id" : 0,
+  "salesman" : "Igor",
+  "price" : "3400000",
+  "qty" : "1",
+  "review" : "5",
+  "min_amount" : "1000",
+  "max_amount" : "50000",
+  "successful_deals" : "15",
+  "status" : "online",
+  "prostatus" : "no"
+}
+

@@ -16,13 +16,13 @@ import java.util.Map;
 import java.util.UUID;
 
 @Component
-public class CryptoManager {
+public class MediaManager {
     private final Path path = Path.of("media");
     private final Map<String, String> types = Map.of(
             "image/jpeg", ".jpg"
     );
 
-    public CryptoManager() throws IOException {
+    public MediaManager() throws IOException {
         Files.createDirectories(path);
     }
 
