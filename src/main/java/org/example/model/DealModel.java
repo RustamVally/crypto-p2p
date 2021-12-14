@@ -7,16 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class OrderModel {
+public class DealModel {
     private long id;
     private String salesman;
     private int price;
-    private double bitcoin;
-    private int review;
-    private int min_amount;
-    private int max_amount;
-    private int successful_deals;
-    private String status;
-    private String proStatus;
-
+    private double balance_btc;
+    private int balance_rub;
+    private String dealStatus;
 }

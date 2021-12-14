@@ -1,10 +1,7 @@
 package org.example.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.dto.OrderGetAllResponseDTO;
-import org.example.dto.OrderGetByIdResponseDTO;
-import org.example.dto.OrderSaveRequestDTO;
-import org.example.dto.OrderSaveResponseDTO;
+import org.example.dto.*;
 import org.example.manager.OrderManager;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,6 +25,10 @@ public class OrderController {
     public OrderSaveResponseDTO save(@RequestBody OrderSaveRequestDTO requestDTO) {
         return manager.save(requestDTO);
     }
-}
 
-//38.38 начать
+    @PostMapping("/removeById")
+    public void removeByIdFromParam(@RequestParam long id) {
+        manager.removeById(id);
+    }
+
+}

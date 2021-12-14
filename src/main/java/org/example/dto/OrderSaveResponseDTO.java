@@ -16,7 +16,7 @@ public class OrderSaveResponseDTO {
         private long id;
         private String salesman;
         private int price;
-        private int qty;
+        private double bitcoin;
         private int review;
         private int min_amount;
         private int max_amount;

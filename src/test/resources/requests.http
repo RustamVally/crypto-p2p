@@ -29,11 +29,11 @@ GET http://localhost:8080/orders/getAll
 
 ###
 
-GET http://localhost:8080/orders/getById?id=1
+GET http://localhost:8080/orders/getById?id=2
 
 ###
 
-GET http://localhost:8080/orders/getById?id=545454
+GET http://localhost:8080/orders/getById?id=222
 
 ###
 
@@ -41,15 +41,32 @@ POST http://localhost:8080/orders/save
 Content-Type: application/json
 
 {
-  "id" : 0,
+  "id" : 1,
   "salesman" : "Igor",
-  "price" : "3400000",
-  "qty" : "1",
-  "review" : "5",
-  "min_amount" : "1000",
-  "max_amount" : "50000",
-  "successful_deals" : "15",
+  "price" : 3400000,
+  "bitcoin" : 1,
+  "review" : 5,
+  "min_amount" : 1000,
+  "max_amount" : 50000,
+  "successful_deals" : 15,
   "status" : "online",
-  "prostatus" : "no"
+  "proStatus" : "no"
 }
 
+###
+
+POST http://localhost:8080/orders/removeById?id=1
+
+###
+
+POST http://localhost:8080/deals/register
+Content-Type: application/json
+
+{
+  "id": 1,
+  "price": 3400000,
+  "balance_btc": 0.2,
+  "balance_rub": 50000,
+  "rating": 4.8,
+  "dealStatus": "sale"
+}

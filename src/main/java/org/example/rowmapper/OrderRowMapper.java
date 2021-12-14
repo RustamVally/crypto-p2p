@@ -15,7 +15,7 @@ public class OrderRowMapper implements RowMapper<OrderModel> {
                 rs.getLong("id"),
                 rs.getString("salesman"),
                 rs.getInt("price"),
-                rs.getInt("qty"),
+                rs.getDouble("bitcoin"),
                 rs.getInt("review"),
                 rs.getInt("min_amount"),
                 rs.getInt("max_amount"),

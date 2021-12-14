@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class User {
+public class DealRegisterRequestDTO {
     private long id;
-    private String name;
+    private String salesman;
+    private int price;
     private double balance_btc;
     private int balance_rub;
-    private double rating;
+    private String dealStatus;
 }
