@@ -62,6 +62,11 @@ public class DealManager {
                     throw new DealRegistrationException("can't update balance_btc for deal with id " + requestDTO.getId());
                 }
             }
+            // TODO: btc -> rub (price - btc)
+            //       if (limit, текущий баланс)
+            //       register deals (id, amount, status - btc2rub | rub2btc
+            //       user1: btc = 0, rub += price * btc
+            //       user2: btc += 1, rub -= price * btc
 
             if (requestDTO.getDealStatus().equals("buy")) {
                 final int affected = template.update(
