@@ -10,15 +10,16 @@ import javax.sql.DataSource;
 
 @Configuration
 public class StartupConfiguration {
-    @Bean
-    public DatabaseStartupValidator databaseStartupValidator(DataSource dataSource) {
-        final DatabaseStartupValidator databaseStartupValidator = new DatabaseStartupValidator();
-        return databaseStartupValidator;
-    }
+  @Bean
+  public DatabaseStartupValidator databaseStartupValidator(DataSource dataSource) {
+    final DatabaseStartupValidator databaseStartupValidator = new DatabaseStartupValidator();
+    databaseStartupValidator.setDataSource(dataSource);
+    return databaseStartupValidator;
+  }
 
-    @Bean
-    @DependsOn("databaseStartupValidator")
-    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
-        return new JdbcTemplate(dataSource);
-    }
+  @Bean
+  @DependsOn("databaseStartupValidator")
+  public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+    return new JdbcTemplate(dataSource);
+  }
 }
