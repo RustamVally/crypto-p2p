@@ -42,12 +42,12 @@ Content-Type: application/json
 
 {
   "id" : 1,
-  "salesman" : "Igor",
-  "price" : 3400000,
-  "bitcoin" : 1,
+  "salesman" : "Misha",
+  "price" : 3700000,
+  "bitcoin" : 2,
   "review" : 5,
-  "min_amount" : 1000,
-  "max_amount" : 50000,
+  "min_amount" : 100,
+  "max_amount" : 5000,
   "successful_deals" : 15,
   "status" : "online",
   "proStatus" : "no"
@@ -63,10 +63,10 @@ POST http://localhost:8080/deals/register
 Content-Type: application/json
 
 {
-  "id": 1,
-  "price": 3400000,
-  "balance_btc": 0.2,
-  "balance_rub": 50000,
+  "deal_id": 1,
+  "name": "Andrey",
+  "price": 10000,
+  "balance_btc": 1.1,
   "rating": 4.8,
-  "dealStatus": "sale"
+  "dealStatus": "buy"
 }

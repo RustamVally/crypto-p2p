@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class DealRegisterRequestDTO {
     private long id;
-    private String salesman;
+    private String name;
     private int price;
     private double balance_btc;
     private int balance_rub;

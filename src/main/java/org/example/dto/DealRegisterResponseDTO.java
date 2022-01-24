@@ -15,10 +15,10 @@ public class DealRegisterResponseDTO {
     @Data
     public static class Deal {
         private long id;
-        private String salesman;
+        private String name;
         private int price;
         private double balance_btc;
-        private int balance_rub;
+        private double balance_rub;
         private String dealStatus;
     }
 }

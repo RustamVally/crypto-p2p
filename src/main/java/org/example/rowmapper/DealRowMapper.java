@@ -14,10 +14,10 @@ public class DealRowMapper implements RowMapper<DealModel> {
     public DealModel mapRow(ResultSet rs, int rowNum) throws SQLException {
         return new DealModel(
                 rs.getLong("id"),
-                rs.getString("salesman"),
+                rs.getString("name"),
                 rs.getInt("price"),
                 rs.getDouble("balance_btc"),
-                rs.getInt("balance_rub"),
+                rs.getDouble("balance_rub"),
                 rs.getString("dealStatus")
         );
     }

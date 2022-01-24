@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Cards {
+public class SaleRegisterResponseDTO {
     private long id;
-    private String bankName;
-    private int number;
-    private int balance_rub;
+    private double balance_btc;
+    private double balance_rub;
 }

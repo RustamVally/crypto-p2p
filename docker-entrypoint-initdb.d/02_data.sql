@@ -7,6 +7,6 @@ INSERT INTO users (name, balance_btc, balance_rub, rating)
 VALUES ('Andrey', 0.3, 10000, 4.8),
        ('Vanya', 0.2, 21000, 5.0);
 
-INSERT INTO deals (salesman, price, balance_btc, balance_rub, dealstatus)
+INSERT INTO deals (name, price, balance_btc, balance_rub, dealstatus)
 VALUES ('Andrey', 59000, 0.3, 10000, 'sale'),
-       ('Vanya', 53000, 0.2, 21000,'buy');
+       ('Vanya', 53000, 0.2, 10000,'buy');
