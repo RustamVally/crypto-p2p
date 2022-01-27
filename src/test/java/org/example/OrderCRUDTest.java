@@ -31,7 +31,7 @@ class OrderCRUDTest {
         // getAll
         mockMvc.perform(
                 MockMvcRequestBuilders.get("/orders/getAll")
-                )
+        )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
                         MockMvcResultMatchers.content().json(
@@ -69,7 +69,8 @@ class OrderCRUDTest {
 
         mockMvc.perform(
                 MockMvcRequestBuilders.get("/orders/getById")
-                        .queryParam("id", String.valueOf(2)))
+                        .queryParam("id", String.valueOf(2))
+                )
                 .andExpectAll(
                         MockMvcResultMatchers.status().isOk(),
                         MockMvcResultMatchers.content().json(
@@ -90,58 +91,50 @@ class OrderCRUDTest {
                                   }
                                 }
                         """));
-//
-//        mockMvc.perform(
-//                        MockMvcRequestBuilders.post("/orders/save")
-//                                .contentType(String.valueOf(MediaType.APPLICATION_JSON))
-//                                .content(
-//                                        // language=JSON
-//                                        """
-//                                                        {
-//                                                            "id": 1,
-//                                                            "salesman": "Misha",
-//                                                            "price": 3700000,
-//                                                            "bitcoin": 3,
-//                                                            "review": 5,
-//                                                            "min_amount": 1000,
-//                                                            "max_amount": 500000,
-//                                                            "successful_deals": 15,
-//                                                            "status": "online",
-//                                                            "proStatus": "no"
-//                                                        }
-//                                                """
-//                                )
-//                )
-//                .andExpectAll(
-//                        MockMvcResultMatchers.status().isOk(),
-//                        MockMvcResultMatchers.content().json(
-//                                // language=JSON
-//                                """
-//                                              {
-//                                                   "order": {
-//                                                     "id": 1,
-//                                                     "salesman": "Misha",
-//                                                     "price": 3700000,
-//                                                     "bitcoin": 3.0,
-//                                                     "review": 5,
-//                                                     "min_amount": 1000,
-//                                                     "max_amount": 500000,
-//                                                     "successful_deals": 15,
-//                                                     "status": "online",
-//                                                     "proStatus": "no"
-//                                                   }
-//                                                 }
-//                                        """
-//                        )
-//                );
-//
-//        mockMvc.perform(
-//                        MockMvcRequestBuilders.get("/orders/getById")
-//                                .queryParam("id", String.valueOf(222))
-//                )
-//                .andExpectAll(
-//                        MockMvcResultMatchers.status().isNotFound()
-//                );
+
+        mockMvc.perform(
+                MockMvcRequestBuilders.post("/orders/save")
+                        .contentType(String.valueOf(MediaType.APPLICATION_JSON)).content(
+                // language=JSON
+                """
+                                {
+                                    "id": 1,
+                                    "salesman": "Misha",
+                                    "price": 3700000,
+                                    "bitcoin": 3,
+                                    "review": 5,
+                                    "min_amount": 1000,
+                                    "max_amount": 500000,
+                                    "successful_deals": 15,
+                                    "status": "online",
+                                    "proStatus": "no"
+                                }
+                        """)).andExpectAll(
+                                MockMvcResultMatchers.status().isOk(),
+                                MockMvcResultMatchers.content().json(
+                // language=JSON
+                """
+                              {
+                                   "order": {
+                                     "id": 1,
+                                     "salesman": "Misha",
+                                     "price": 3700000,
+                                     "bitcoin": 3.0,
+                                     "review": 5,
+                                     "min_amount": 1000,
+                                     "max_amount": 500000,
+                                     "successful_deals": 15,
+                                     "status": "online",
+                                     "proStatus": "no"
+                                   }
+                                 }
+                        """)
+        );
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/orders/getById")
+                .queryParam("id", String.valueOf(222))
+        ).
+                andExpectAll(MockMvcResultMatchers.status().isNotFound());
 
     }
 }
