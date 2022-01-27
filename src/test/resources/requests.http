@@ -41,21 +41,21 @@ POST http://localhost:8080/orders/save
 Content-Type: application/json
 
 {
-  "id" : 1,
-  "salesman" : "Misha",
-  "price" : 3700000,
-  "bitcoin" : 2,
-  "review" : 5,
-  "min_amount" : 100,
-  "max_amount" : 5000,
-  "successful_deals" : 15,
-  "status" : "online",
-  "proStatus" : "no"
+  "id": 1,
+  "salesman": "Misha",
+  "price": 3700000,
+  "bitcoin": 3,
+  "review": 5,
+  "min_amount": 1000,
+  "max_amount": 500000,
+  "successful_deals": 15,
+  "status": "online",
+  "proStatus": "no"
 }
 
 ###
 
-POST http://localhost:8080/orders/removeById?id=1
+POST http://localhost:8080/orders/removeById?id=2
 
 ###
 

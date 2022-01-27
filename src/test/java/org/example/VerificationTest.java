@@ -19,7 +19,7 @@ import java.nio.file.Path;
 @SpringBootTest
 @DirtiesContext
 @AutoConfigureMockMvc
-class OrderCRUDTest {
+class VerificationTest {
     @Container
     static DockerComposeContainer<?> compose = new DockerComposeContainer<>(
             Path.of("docker-compose.yml").toFile()
